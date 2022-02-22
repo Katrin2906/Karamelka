@@ -5,15 +5,20 @@ import static java.lang.System.out;
 public class RunningCycle {
     public static void main(String[] args) {
 
-        int t=0;
-        int a=1;
+        int d=1;
+        float l=10;
+        float s=0;
 
-        do {
-            System.out.println("Прошло " + t + " часов, стало" +a +" амеб");
-            t = t + 3;
-            a=a*2;
-        }
-        while(t<=24);
+        while(d<=7){
+
+            l=l+(l/10);
+            s=s+l;
+
+            System.out.println(d);
+            System.out.println(l);
+            System.out.println(s);
+            d=d+1;
+        }System.out.println(s);
 
 
 
