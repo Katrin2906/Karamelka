@@ -6,6 +6,6 @@ public class OddNumberSum {
         for (int i = 1; i <= 99; i = i + 2) {
             s = s + i;
         }
-        System.out.print("Общая сумма нечетных чисел от 1 до 99 равна " + s);
+        System.out.println("Общая сумма нечетных чисел от 1 до 99 равна " + s);
     }
 }
