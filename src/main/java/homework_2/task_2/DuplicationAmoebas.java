@@ -3,15 +3,15 @@ package homework_2.task_2;
 public class DuplicationAmoebas {
     public static void main(String[] args) {
 
-        int t = 0; // время
-        int a = 1; // амебы
+        int time = 0;
+        int amoebas = 1;
 
         do {
-            System.out.println("Прошло " + t + " часа(-ов), стало " + a + " амеб(-ы)");
-            t = t + 3;
-            a = a * 2;
+            System.out.println("Прошло " + time + " часа(-ов), стало " + amoebas + " амеб(-ы)");
+            time = time + 3;
+            amoebas = amoebas * 2;
         }
-        while (t <= 24);
+        while (time <= 24);
 
 
     }

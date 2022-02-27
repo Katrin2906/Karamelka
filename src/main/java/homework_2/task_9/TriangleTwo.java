@@ -3,13 +3,13 @@ package homework_2.task_9;
 public class TriangleTwo {
     public static void main(String[] args) {
 
-        for (int i = 1; i <= 4; i++) { // внешний цикл считает количество линий и запускает вложенные циклы
+        for (int outer = 1; outer <= 4; outer++) {
 
-            for (int j = 4; j >= i; j--) {
+            for (int sign = 4; sign >= outer; sign--) {
                 System.out.print("*");
             }
 
-            for (int k = 1; k <= i; k++) {
+            for (int space = 1; space<= outer; space++) {
                 System.out.print(" ");
             }
 

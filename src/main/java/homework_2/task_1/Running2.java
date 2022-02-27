@@ -2,15 +2,15 @@ package homework_2.task_1;
 
 public class Running2 {
     public static void main(String[] args) {
-        int d = 1;
-        float l = 10;
-        float s = 0;
+        int days = 1;
+        double l = 10;
+        double sum = 0;
         do {
-            System.out.println("Расстояние за " + d + " день " + l + " км");
-            d = d + 1;
+            System.out.println("Расстояние за " + days + " день " + l + " км");
+            days = days + 1;
             l = l + l / 10;
-            s = s + l;
-        } while (d <= 7);
-        System.out.println("Общее расстояние " + (s - 10) + "км");
+            sum = sum + l;
+        } while (days <= 7);
+        System.out.println("Общее расстояние " + (sum - 10) + "км");
     }
 }

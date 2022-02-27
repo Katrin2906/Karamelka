@@ -2,10 +2,10 @@ package homework_2.task_7;
 
 public class OddNumberSum {
     public static void main(String[] args) {
-        int s = 0;
-        for (int i = 1; i <= 99; i = i + 2) {
-            s = s + i;
+        int sum = 0;
+        for (int odd = 1; odd <= 99; odd = odd + 2) {
+            sum = sum + odd;
         }
-        System.out.println("Общая сумма нечетных чисел от 1 до 99 равна " + s);
+        System.out.println("Общая сумма нечетных чисел от 1 до 99 равна " + sum);
     }
 }

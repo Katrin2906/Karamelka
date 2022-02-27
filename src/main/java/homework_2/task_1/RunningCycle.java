@@ -5,19 +5,19 @@ import static java.lang.System.out;
 public class RunningCycle {
     public static void main(String[] args) {
 
-        int d = 1; // дни
-        float l = 10; //расстояние
-        float s = 0; //общее расстояние
+        int days = 1;
+        double l = 10;
+        double sum = 0;
 
-        while (d < 7) {
+        while (days < 7) {
 
             l = l + (l / 10);
-            s = s + l;
+            sum = sum + l;
 
             System.out.println("Расстояние за день " + l + "км");
-            d = d + 1;
+            days = days + 1;
         }
-        System.out.println("Общее расстояние пробега " + (s + 10) + " км");
+        System.out.println("Общее расстояние пробега " + (sum + 10) + " км");
 
 
     }

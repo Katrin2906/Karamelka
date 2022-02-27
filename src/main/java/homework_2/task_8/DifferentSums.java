@@ -2,19 +2,18 @@ package homework_2.task_8;
 
 public class DifferentSums {
     public static void main(String[] args) {
-        int s = 0;
-        for (int e = 0; e <= 100; e = e + 2) {
-            s = s + e;
+        int sum_even = 0;
+        for (int even = 0; even <= 100; even = even + 2) {
+            sum_even = sum_even + even;
 
         }
-        System.out.println("Общая сумма четных чисел от 0 до 100 равна " + s);
+        System.out.println("Общая сумма четных чисел от 0 до 100 равна " + sum_even);
 
-        int n = 0;
-        for (int d = 1; d <= 100; d = d + 2) {
-            n = n + d;
-
+        int sum_odd = 0;
+        for (int odd = 1; odd <= 100; odd = odd + 2) {
+            sum_odd = sum_odd+odd;
         }
-        System.out.println("Общая сумма нечетных чисел от 0 до 100 равна " + n);
-        System.out.println("Общая сумма чисел от 0 до 100 равна " + (s + n));
+        System.out.println("Общая сумма нечетных чисел от 0 до 100 равна " + sum_odd);
+        System.out.println("Общая сумма чисел от 0 до 100 равна " + (sum_even + sum_odd));
     }
 }
