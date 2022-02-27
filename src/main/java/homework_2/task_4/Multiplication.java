@@ -1,6 +1,7 @@
 package homework_2.task_4;
 
 public class Multiplication {
+    // этот код пока не компилируется
     public static void main(String[] args) {
         int mult = 0;
         int a = a;
