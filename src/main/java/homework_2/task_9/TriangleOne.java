@@ -1,6 +1,7 @@
 package homework_2.task_9;
 
 public class TriangleOne {
+    // эту задачу надо решить в рамках одного класса, чтобы на экране появилось сразу два треугольника
     public static void main(String[] args) {
 
         for (int outer = 0; outer <= 4; outer++) {
