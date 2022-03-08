@@ -1,19 +1,38 @@
 package homework_2.task_4;
 
 public class Multiplication {
-    // этот код пока не компилируется
     public static void main(String[] args) {
+        int a = 1;
+        int b = -1;
+
         int mult = 0;
-        int a = a;
-        int b =b;
-        int n = 0;
-
-        while (n < b) {
-            mult = mult + a;
-            n = ++n;
-
+        if (a == 0 || b == 0) {
+            System.out.println("результат 0");;
         }
-        System.out.println(mult);
+        if (b == 1) {
+            System.out.println("результат " +a);;
+        }
+        if (a == 1) {
+            System.out.println("результат " +b);;
+        }
 
+        if (a > 0 && b < 0 || b > 0 && a < 0) {
+            if (Math.abs(a) > Math.abs(b)) {
+                for (int i = 0; i < Math.abs(b); ++i) {
+                    mult = mult + Math.abs(a);
+                }
+            } else {
+                for (int i = 0; i < Math.abs(a); ++i) {
+                    mult = mult + Math.abs(b);
+                }
+            }
+            if (a < 0 || b < 0) {
+                System.out.println(mult);
+            } else {
+                System.out.println(-mult);
+            }
+        }
     }
 }
+
+
