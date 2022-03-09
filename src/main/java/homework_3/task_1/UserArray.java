@@ -8,7 +8,7 @@ public class UserArray {
         int[] userArray = new int[3];
         int summ = 0;
 
-        for (int i = 0; i < userArray.length; i++) {
+        for (int i = 0; i < userArray.length; ++i) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter array element ");
             userArray[i] = scanner.nextInt();
