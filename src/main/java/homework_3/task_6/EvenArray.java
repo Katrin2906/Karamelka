@@ -1,0 +1,39 @@
+package homework_3.task_6;
+
+import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
+
+public class EvenArray {
+    public static void main(String[] args) {
+
+        // Scanner scanner = new Scanner(System.in);
+        //  System.out.println("Enter array length ");
+        // int х = scanner.nextInt();
+
+        Random r = new Random();
+        int x = r.nextInt(50);
+        int[] initialArray = new int[x];
+        int even = 0;
+
+        for (int i = 0; i < initialArray.length; i++) {
+            initialArray[i] = i;
+            if (initialArray[i] % 2 == 0) {
+                even = even + 1;
+            }
+        }
+        System.out.println("Initial array: " + Arrays.toString(initialArray));
+
+        int[] evenArray = new int[even];
+        int index = 0;
+        for (int i = 0; i < initialArray.length; i++) {
+            if (initialArray[i] % 2 == 0) {
+                evenArray[index] = initialArray[i];
+                index = index + 1;
+            }
+        }
+        System.out.println("Final array: " + Arrays.toString(evenArray));
+    }
+}
+
+
