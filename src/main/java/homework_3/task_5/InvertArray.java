@@ -14,7 +14,6 @@ public class InvertArray {
             int revers = invertArray[r];
             invertArray[r] = invertArray[invertArray.length - 1 - r];
             invertArray[invertArray.length - 1 - r] = revers;
-
         }
         System.out.println("Revers array : " + Arrays.toString(invertArray));
     }

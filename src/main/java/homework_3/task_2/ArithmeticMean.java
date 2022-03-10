@@ -12,7 +12,7 @@ public class ArithmeticMean {
         int х = scanner.nextInt();
         int[] arrayMean = new int[х];
 
-        for (int i = 0; i < arrayMean.length; ++i) {
+        for (int i = 0; i < arrayMean.length; i=++i) {
             arrayMean[i] = i;
             summ = summ + arrayMean[i];
         }
