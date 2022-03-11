@@ -8,8 +8,10 @@ public class UserArray {
         int[] userArray = new int[3];
         int sum = 0;
 
+        Scanner scanner = new Scanner(System.in);
+        
         for (int i = 0; i < userArray.length; ++i) {
-            Scanner scanner = new Scanner(System.in);
+            // Scanner scanner = new Scanner(System.in); - эту строку я вынес за пределы цикла, каждый раз создавать объект не надо, можно просто пользоваться
             System.out.println("Enter array elements ");
             userArray[i] = scanner.nextInt();
             sum = sum + userArray[i];
@@ -17,7 +19,7 @@ public class UserArray {
 
         int min = userArray[0];
         int max = userArray[0];
-        for (int i : userArray) {
+        for (int i : userArray) { // i -> elem, название переменной i обычно используется только в цикле for, а это foreach
             if (i < min) {
                 min = i;
             }
