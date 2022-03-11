@@ -11,8 +11,8 @@ public class EvenArray {
         //  System.out.println("Enter array length ");
         // int х = scanner.nextInt();
 
-        Random r = new Random();
-        int x = r.nextInt(50);
+        Random r = new Random(); // r -> Random
+        int x = r.nextInt(50); // x -> randomInt
         int[] initialArray = new int[x];
         int even = 0;
 
