@@ -10,10 +10,10 @@ public class InvertArray {
         }
         System.out.println("First array " + Arrays.toString(invertArray));
 
-        for (int r = 0; r < invertArray.length / 2; r++) { // r - я понимаю что хочется разнообразия, но есть общепринятые правила, лучше r -> i
-            int revers = invertArray[r];
-            invertArray[r] = invertArray[invertArray.length - 1 - r]; // invertArray.length - 1 - r можно вынести в переменную int lastRightElement
-            invertArray[invertArray.length - 1 - r] = revers;
+        for (int i = 0; i < invertArray.length / 2; i++) {
+            int revers = invertArray[i];
+            invertArray[i] = invertArray[invertArray.length - 1 - i]; // invertArray.length - 1 - r можно вынести в переменную int lastRightElement
+            invertArray[invertArray.length - 1 - i] = revers;
         }
         System.out.println("Revers array : " + Arrays.toString(invertArray));
     }

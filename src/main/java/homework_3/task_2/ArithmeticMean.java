@@ -9,10 +9,10 @@ public class ArithmeticMean {
         double mean = 0;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter array length ");
-        int х = scanner.nextInt(); // x - это длина массива, вот и назови переменную arrayLength
-        int[] arrayMean = new int[х];
+        int arrayLength = scanner.nextInt();
+        int[] arrayMean = new int[arrayLength];
 
-        for (int i = 0; i < arrayMean.length; i=++i) { // i = ++i - это некорректная запись, просто i++
+        for (int i = 0; i < arrayMean.length; i++) {
             arrayMean[i] = i;
             summ = summ + arrayMean[i];
         }

@@ -7,12 +7,8 @@ import java.util.Scanner;
 public class EvenArray {
     public static void main(String[] args) {
 
-        // Scanner scanner = new Scanner(System.in);
-        //  System.out.println("Enter array length ");
-        // int х = scanner.nextInt();
-
-        Random r = new Random(); // r -> Random
-        int x = r.nextInt(50); // x -> randomInt
+        Random random = new Random();
+        int x = random.nextInt(50);
         int[] initialArray = new int[x];
         int even = 0;
 

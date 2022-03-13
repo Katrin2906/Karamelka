@@ -7,8 +7,8 @@ public class MultiplicationTable {
     public static void main(String[] args) {
 
         // не очень красиво вывело на экран, но работает
-        
-        int[][] tableArray = new int[11][11]; // 11 в данном случае повторяется, вынеси в отдельную переменную int tableSize = 11
+        int tableSize = 11;
+        int[][] tableArray = new int[tableSize][tableSize];
 
         for (int i = 1; i < tableArray.length; i++) {
             for (int j = 1; j < tableArray[i].length; j++) {

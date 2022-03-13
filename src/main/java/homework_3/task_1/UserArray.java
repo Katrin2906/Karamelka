@@ -19,12 +19,12 @@ public class UserArray {
 
         int min = userArray[0];
         int max = userArray[0];
-        for (int i : userArray) { // i -> elem, название переменной i обычно используется только в цикле for, а это foreach
-            if (i < min) {
-                min = i;
+        for (int elem : userArray) { // i -> elem, название переменной i обычно используется только в цикле for, а это foreach
+            if (elem < min) {
+                min = elem;
             }
-            if (i > max) {
-                max = i;
+            if (elem > max) {
+                max = elem;
             }
         }
         System.out.println("Final array " + Arrays.toString(userArray));
