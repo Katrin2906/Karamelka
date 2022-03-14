@@ -5,7 +5,7 @@ public class DwarfsMain {
         Dwarfs balin = new Dwarfs("Balin", "231");
 
         System.out.println(balin.show());
-
+// лишняя строка
     }
 
 }
