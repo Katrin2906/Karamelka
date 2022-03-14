@@ -6,25 +6,25 @@ public class Dwarfs {
     private String name;
     private String age;
 
-    private static String text = "Hello from static";
+    private static String text = "Hello from static"; // static поля идут первыми в классе
 
-
+// лишняя строка
     public Dwarfs(String name, String age) {
         this.name = name;
         this.age = age;
-
+// лишняя строка
     }
 
-
-    public Dwarfs() {
+// лишняя строка
+    public Dwarfs() { // конструктор без аргументов обычно идет перед другими конструкторами
         this("Балин", "231");
     }
 
-    public String dwarfName() {
+    public String dwarfName() { // dwarfName -> getName
         return name;
     }
 
-    public String dwarfAge() {
+    public String dwarfAge() { // dwarfAge -> getAge
         return age;
     }
 
@@ -45,7 +45,7 @@ public class Dwarfs {
         return Objects.hash(name, age);
     }
 
-
+// лишняя строка
     public void Text(String text) {
         this.text = text;
     }
