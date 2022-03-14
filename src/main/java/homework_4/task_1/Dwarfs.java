@@ -6,11 +6,15 @@ public class Dwarfs {
     private String name;
     private String age;
 
+    private static String text = "Hello from static";
+
 
     public Dwarfs(String name, String age) {
         this.name = name;
         this.age = age;
+
     }
+
 
     public Dwarfs() {
         this("Балин", "231");
@@ -41,11 +45,20 @@ public class Dwarfs {
         return Objects.hash(name, age);
     }
 
-    @Override
-    public String toString() {
-        return "Dwarfs{" +
-                "name='" + name + '\'' +
-                ", age='" + age + '\'' +
-                '}';
+
+    public void Text(String text) {
+        this.text = text;
     }
+
+    public void realiseText(String text) {
+        this.text = text;
+    }
+
+    public void printText() {
+        System.out.println(text);
+    }
+
 }
+
+
+
