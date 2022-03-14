@@ -18,8 +18,8 @@ public class DwarfsArray {
 
         int similar = 0;
 
-        for (int i = 0; i < 7; i++) {
-            for (int j = i + 1; j < 7; j++) {
+        for (int i = 0; i < 7; i++) { // 7 -> dwarf.length
+            for (int j = i + 1; j < 7; j++) { // 7 -> dwarf.length
                 if (dwarf[i].equals(dwarf[j])) {
                     similar = similar + 1;
                     System.out.println("Overlap! " + " Array number " + i + " array element" + dwarf[i] + " with " + " array number " + j + " array element " + dwarf[j]);
