@@ -3,28 +3,25 @@ package homework_4.task_1;
 import java.util.Objects;
 
 public class Dwarfs {
+
+    private static String text = "Hello from static";
     private String name;
     private String age;
 
-    private static String text = "Hello from static"; // static поля идут первыми в классе
-
-// лишняя строка
-    public Dwarfs(String name, String age) {
-        this.name = name;
-        this.age = age;
-// лишняя строка
-    }
-
-// лишняя строка
-    public Dwarfs() { // конструктор без аргументов обычно идет перед другими конструкторами
+    public Dwarfs() {
         this("Балин", "231");
     }
 
-    public String dwarfName() { // dwarfName -> getName
+    public Dwarfs(String name, String age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
         return name;
     }
 
-    public String dwarfAge() { // dwarfAge -> getAge
+    public String getAge() {
         return age;
     }
 
@@ -45,7 +42,6 @@ public class Dwarfs {
         return Objects.hash(name, age);
     }
 
-// лишняя строка
     public void Text(String text) {
         this.text = text;
     }
@@ -57,7 +53,6 @@ public class Dwarfs {
     public void printText() {
         System.out.println(text);
     }
-
 }
 
 

@@ -2,36 +2,27 @@ package homework_2.task_4;
 
 public class Multiplication {
     public static void main(String[] args) {
-        int a = 1;
-        int b = -1;
-
-        int mult = 0;
-        if (a == 0 || b == 0) {
-            System.out.println("результат 0");;
+        int a = 0;
+        int b = -6;
+        boolean isNegative = false;
+        if ((a > 0 && b < 0) || (a < 0 && b > 0)) {
+            isNegative = true;
         }
-        if (b == 1) {
-            System.out.println("результат " +a);;
+        a = Math.abs(a);
+        b = Math.abs(b);
+        if (a > b) {
+            int temp = a;
+            a = b;
+            b = temp;
         }
-        if (a == 1) {
-            System.out.println("результат " +b);;
+        int result = 0;
+        for (int i = 0; i < a; ++i) {
+            result += b;
         }
-
-        if (a > 0 && b < 0 || b > 0 && a < 0) {
-            if (Math.abs(a) > Math.abs(b)) {
-                for (int i = 0; i < Math.abs(b); ++i) {
-                    mult = mult + Math.abs(a);
-                }
-            } else {
-                for (int i = 0; i < Math.abs(a); ++i) {
-                    mult = mult + Math.abs(b);
-                }
-            }
-            if (a < 0 || b < 0) {
-                System.out.println(mult);
-            } else {
-                System.out.println(-mult);
-            }
+        if (isNegative) {
+            result = -result;
         }
+        System.out.println(result);
     }
 }
 

@@ -7,9 +7,6 @@ public class DwarfText {
         Dwarfs balin = new Dwarfs("Balin", "231");
         Dwarfs bombur = new Dwarfs("Bombur", "241");
 
-// лишняя строка
-        balin.realiseText("Hello from my static");
-
         balin.printText();
         bombur.printText();
     }
