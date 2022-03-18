@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class HouseList {
     public static void main(String[] args) {
-        Object[] house = new Object[4];
+        Object[] house = new Object[4]; // house -> houses, там же несколько домов
 
         house[0] = new CityHouse(34, 118, true);
         house[1] = new TownHouse(2, 6, false);
