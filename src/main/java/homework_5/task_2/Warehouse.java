@@ -1,5 +1,6 @@
 package homework_5.task_2;
 
+// код надо отформатировать
 public class Warehouse {
   private Integer jawerly [];
   private Integer index;
