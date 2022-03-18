@@ -6,17 +6,17 @@ public class CityHouse extends House {
         super(floorNumber, residentNumber, heatOn);
     }
 
-    @Override
+    @Override // если ты никак не меняешь поведение метода, то зачем его переопределять, отсюда можно удалить, а работать все будет как и прежде
     public Integer getFloorNumber() {
         return super.getFloorNumber();
     }
-
-    @Override
+ 
+    @Override // если ты никак не меняешь поведение метода, то зачем его переопределять, отсюда можно удалить, а работать все будет как и прежде
     public Integer getResidentNumber() {
         return super.getResidentNumber();
     }
 
-    @Override
+    @Override // если ты никак не меняешь поведение метода, то зачем его переопределять, отсюда можно удалить, а работать все будет как и прежде
     public Boolean heatOn() {
         return super.heatOn();
     }
