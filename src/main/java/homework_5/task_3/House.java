@@ -1,6 +1,6 @@
 package homework_5.task_3;
 
-abstract public class House { // public abstract... лучше так
+public abstract class House {
 
     private Integer floorNumber;
     private Integer residentNumber;
@@ -20,18 +20,11 @@ abstract public class House { // public abstract... лучше так
         return residentNumber;
     }
 
-    public Boolean heatOn() {
-        return heatOn = true;
-    }
-    
-    // лучше так
-    /*
     public Boolean getHeatOn() {
         return heatOn;
     }
-    
-    public void setHeatOn(Boolean heatOn) {
-        return this.heatOn=heatOn;
+
+    public Boolean setHeatOn(Boolean heatOn) {
+        return this.heatOn = heatOn;
     }
-    */
 }
