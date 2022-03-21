@@ -2,7 +2,7 @@ package homework_6.task_2;
 
 public class CarMoveMain {
     public static void main(String[] args) {
-        CarMove car = new CarMove(5, false, true);
+        CarMove car = new CarMove(0, false, true);
 
         if (car.getTransmission() < 0 || car.getTransmission() > 7) {
             System.out.println("C передачей что-то не то...Опять сломалась?");
