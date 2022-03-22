@@ -1,6 +1,9 @@
 package homework_6.task_3;
 
 public class MonkeyManager {
+    // что-то пошло не так, у тебя все названия полей класса с большой буквы, а должны начинаться с маленькой BananasBranches -> bananasBranches
+    
+    // BananasBranches, Bananas и т.д. скорее всего должны быть классами с одноименным названием, а не Integer/Boolean, посмотри как Саша Козлов решил задачу
     private Integer BananasBranches;
     private Integer Bananas;
     private Integer CoconutBranches;
@@ -27,15 +30,15 @@ public class MonkeyManager {
     }
 
     public String TreeCount() {
-        if (CoconutMonkey == true) {
+        if (CoconutMonkey == true) { // if (CoconutMonkey) {
             return "Кокосов выросло" + ((CoconutBranches + 1) * Coconut);
         }
 
-        if (BananaMonkey == true) {
+        if (BananaMonkey == true) { //  if (BananaMonkey) {
             return "Бананов выросло " + ((BananasBranches + 1) * Bananas);
         }
 
-        if (CoconutMonkey == true && BananaMonkey == true) {
+        if (CoconutMonkey == true && BananaMonkey == true) { //if (CoconutMonkey && BananaMonkey)
             return "Всего фруктов " + ((CoconutBranches + 1) * Coconut) + ((BananasBranches + 1) * Bananas);
         }
         return "Посчитано";
