@@ -1,7 +1,10 @@
 package homework_6.task_2;
 
+// всегда выноси повторы в переменную
 public class CarMoveMain {
     public static void main(String[] args) {
+        
+       // в методе main не должно быть проверок, ты просто вызываешь методы машины, а она уже должна проверять и выполнять или нет действие
         CarMove car = new CarMove(0, false, true);
 
         if (car.getTransmission() < 0 || car.getTransmission() > 7) {
