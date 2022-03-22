@@ -1,43 +1,56 @@
 package homework_6.task_2;
 
 public class CarMove {
-    private Integer Transmission; // Transmission -> transmission
-    private Boolean Engine; // Engine -> engine
-    private Boolean Accelerator; // Accelerator -> accelerator
-    private Integer Speed; // Speed -> speed
+    private Integer transmission;
+    private Boolean engine;
+    private Boolean accelerator;
+    private Integer speed;
+    public static final Integer MIN_TRANSMISSION = 0;
+    public static final Integer MAX_TRANSMISSION = 7;
+    public static final Integer TRANSMISSION_NUMBER = 20;
+    public static final Integer TRANSMISSION_MOVE = 1;
 
-    // здесь тоже поправь названия переменных
-    public CarMove(Integer Transmission, Boolean Engine, Boolean Accelerator) {
-        this.Transmission = Transmission;
-        this.Engine = Engine;
-        this.Accelerator = Accelerator;
+
+    public CarMove(Integer transmission, Boolean engine, Boolean accelerator) {
+        this.transmission = transmission;
+        this.engine = engine;
+        this.accelerator = accelerator;
     }
 
     public Integer SwitchAbove() {
-        if (Transmission < 7 && Transmission >= 0) { // вынеси 7 и 0 в константы класса
-            return (Transmission + 1);
+        if (transmission < MAX_TRANSMISSION && transmission >= MIN_TRANSMISSION) {
+            return (transmission + 1);
         } else {
             return null;
         }
     }
 
     public Integer SwitchBelow() {
-        if (Transmission <= 7 && Transmission > 0) { // вынеси 7 и 0 в константы класса
-            return (Transmission - 1);
+        if (transmission <= MAX_TRANSMISSION && transmission > MIN_TRANSMISSION) {
+            return (transmission - 1);
         } else {
             return null;
         }
     }
 
+    public String BreakTransmission() {
+        if (transmission < MIN_TRANSMISSION || transmission > MAX_TRANSMISSION) {
+            return "C передачей что-то не то...Опять сломалась?";
+        } else {
+            return "Передача работает";
+        }
+
+    }
+
     public String Switch() {
-        if (Transmission == 0) { // Transmission тип Integer, т.е. не примитив, сравниваем только через equals()
+        if (transmission.equals(MIN_TRANSMISSION)) {
             return "Не едет, передача не переключена";
         }
         return "Передача может быть понижена до " + SwitchBelow() + " или повышена до " + SwitchAbove();
     }
 
     public String EngineOff() {
-        if (Engine == false) { // if (Engine == false) -> if (Engine) 
+        if (!engine) {
             return "Заглушен, мотор уже был заглушен";
         } else {
             return "Мотор заведен";
@@ -45,7 +58,7 @@ public class CarMove {
     }
 
     public String EngineOn() {
-        if (Engine == true) { // if (Engine == false) -> if (Engine) 
+        if (engine) {
             return "Мотор заведен, уже был заведен";
         } else {
             return "Мотор заглушен";
@@ -53,41 +66,45 @@ public class CarMove {
     }
 
     public String AcceleratorPress() {
-        if (Accelerator == true) { // if (Accelerator == false) -> if (Accelerator) 
+        if (accelerator) {
             return "Педаль газа в пол!";
         } else {
-            return "Не едем, педаль газа не нажата";
+            return "Не едет, педаль газа не нажата";
         }
     }
 
     public Integer SpeedValue() {
-        if (Transmission <= 7 && Transmission >= 0) { // вынеси 7 и 0 в константы класса
-            Speed = Transmission * 20; // 20 тоже в константу
-            return Speed;
+        if (transmission <= MAX_TRANSMISSION && transmission >= MIN_TRANSMISSION) {
+            speed = transmission * TRANSMISSION_NUMBER;
+            return speed;
         } else {
             return null;
         }
     }
 
-    public Boolean getEngine() {
-        return Engine;
+    public String CarMove() {
+        if (transmission < TRANSMISSION_MOVE || transmission > MAX_TRANSMISSION || !engine || !accelerator) {
+            return "Не поедет, что-то не работает...";
+        } else {
+            return "Поехали!";
+        }
     }
 
-    public Integer getTransmission() {
-        return Transmission;
-    }
-
-    public Boolean getAccelerator() {
-        return Accelerator;
+    public String CarMoveRightNow() {
+        if (transmission > TRANSMISSION_MOVE && transmission <= MAX_TRANSMISSION && engine && accelerator) {
+            return "Машина уже в пути! Скорость движения сейчас " + SpeedValue() +"км/час";
+        } else {
+            return "Совсем не поедет ((";
+        }
     }
 
     @Override
     public String toString() {
         return "CarMove{" +
-                "Transmission=" + Transmission +
-                ", Engine=" + Engine +
-                ", Speed=" + Speed +
-                ", Accelerator=" + Accelerator +
+                "Transmission=" + transmission +
+                ", Engine=" + engine +
+                ", Speed=" + speed +
+                ", Accelerator=" + accelerator +
                 '}';
     }
 }

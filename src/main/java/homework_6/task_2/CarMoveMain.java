@@ -1,31 +1,16 @@
 package homework_6.task_2;
 
-// всегда выноси повторы в переменную
 public class CarMoveMain {
     public static void main(String[] args) {
-        
-       // в методе main не должно быть проверок, ты просто вызываешь методы машины, а она уже должна проверять и выполнять или нет действие
-        CarMove car = new CarMove(0, false, true);
 
-        if (car.getTransmission() < 0 || car.getTransmission() > 7) {
-            System.out.println("C передачей что-то не то...Опять сломалась?");
-        }
-
-        if (car.getTransmission() < 1 || car.getTransmission() > 7 || car.getEngine() == false || car.getAccelerator() == false) {
-            System.out.println("Не поедем ((");
-        } else {
-            System.out.println("Поехали! " + " Скорость машины " + car.SpeedValue());
-        }
-
-        if (car.getTransmission() > 1 && car.getTransmission() <= 7 && car.getEngine() == true && car.getAccelerator() == true) {
-            System.out.println("Уже в пути! " + " Скорость машины " + car.SpeedValue());
-        } else {
-            System.out.println("Опять не едем ((");
-        }
+        CarMove car = new CarMove(168, false, false);
 
         System.out.println(car.EngineOff());
         System.out.println(car.EngineOn());
         System.out.println(car.AcceleratorPress());
+        System.out.print(car.BreakTransmission()+" ");
         System.out.println(car.Switch());
+        System.out.println(car.CarMove());
+        System.out.println(car.CarMoveRightNow());
     }
 }
