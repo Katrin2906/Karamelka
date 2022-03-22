@@ -12,6 +12,7 @@ public class RecursionCycleMain {
     }
 }
 
+// лучше делай классы в отдельном файле
 class RecursionCycle {
 
     int cycle[];
