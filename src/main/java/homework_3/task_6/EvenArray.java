@@ -2,7 +2,6 @@ package homework_3.task_6;
 
 import java.util.Arrays;
 import java.util.Random;
-import java.util.Scanner;
 
 public class EvenArray {
     public static void main(String[] args) {

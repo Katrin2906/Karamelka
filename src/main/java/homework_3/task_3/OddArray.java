@@ -2,7 +2,6 @@ package homework_3.task_3;
 
 import java.util.Arrays;
 import java.util.Random;
-import java.util.Scanner;
 
 public class OddArray {
     public static void main(String[] args) {

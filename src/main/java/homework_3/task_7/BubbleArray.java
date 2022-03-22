@@ -7,14 +7,14 @@ public class BubbleArray {
 
         int[] bubbleArray = {4, 15, 178, -23, 0, 0, 1000};
         boolean sorted = false;
-        int sort; // sort - больше похоже на переменную типа boolean, temp/tmp/replacement и т.д. здесь больше подойдет
+        int replacement;
         while (!sorted) {
             sorted = true;
             for (int i = 0; i < bubbleArray.length - 1; i++) {
                 if (bubbleArray[i] > bubbleArray[i + 1]) {
-                    sort = bubbleArray[i];
+                    replacement = bubbleArray[i];
                     bubbleArray[i] = bubbleArray[i + 1];
-                    bubbleArray[i + 1] = sort;
+                    bubbleArray[i + 1] = replacement;
                     sorted = false;
                 }
             }

@@ -19,7 +19,7 @@ public class CarMove {
 
     public Integer SwitchAbove() {
         if (transmission < MAX_TRANSMISSION && transmission >= MIN_TRANSMISSION) {
-            return (transmission + 1);
+            return (transmission++);
         } else {
             return null;
         }
@@ -27,7 +27,7 @@ public class CarMove {
 
     public Integer SwitchBelow() {
         if (transmission <= MAX_TRANSMISSION && transmission > MIN_TRANSMISSION) {
-            return (transmission - 1);
+            return (transmission--);
         } else {
             return null;
         }
@@ -92,7 +92,7 @@ public class CarMove {
 
     public String CarMoveRightNow() {
         if (transmission > TRANSMISSION_MOVE && transmission <= MAX_TRANSMISSION && engine && accelerator) {
-            return "Машина уже в пути! Скорость движения сейчас " + SpeedValue() +"км/час";
+            return "Машина уже в пути! Скорость движения сейчас " + SpeedValue() + "км/час";
         } else {
             return "Совсем не поедет ((";
         }

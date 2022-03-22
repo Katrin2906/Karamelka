@@ -11,9 +11,10 @@ public class InvertArray {
         System.out.println("First array " + Arrays.toString(invertArray));
 
         for (int i = 0; i < invertArray.length / 2; i++) {
+            int lastRightElement = invertArray.length - 1 - i;
             int revers = invertArray[i];
-            invertArray[i] = invertArray[invertArray.length - 1 - i]; // invertArray.length - 1 - r можно вынести в переменную int lastRightElement
-            invertArray[invertArray.length - 1 - i] = revers;
+            invertArray[i] = invertArray[lastRightElement];
+            invertArray[lastRightElement] = revers;
         }
         System.out.println("Revers array : " + Arrays.toString(invertArray));
     }
