@@ -25,5 +25,4 @@ public class Counter {
             return "Не найдено";
         }
     }
-
 }

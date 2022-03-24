@@ -14,7 +14,7 @@ public class EvenArray {
         for (int i = 0; i < initialArray.length; i++) {
             initialArray[i] = i;
             if (initialArray[i] % 2 == 0) {
-                even = even + 1;
+                even++;
             }
         }
         System.out.println("Initial array: " + Arrays.toString(initialArray));
