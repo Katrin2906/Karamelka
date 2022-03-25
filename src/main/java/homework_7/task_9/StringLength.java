@@ -11,7 +11,7 @@ public class StringLength {
         blabla[5] = "the";
 
         for (int i = 0; i < blabla.length; i++) {
-            if (blabla[i].length() >= 5) {
+            if (blabla[i].length() >= 5) { // 5 вынеси в переменную, магических чисел в коде стоит избегать
                 System.out.println("Нашлась! " + blabla[i]);
             }
         }
