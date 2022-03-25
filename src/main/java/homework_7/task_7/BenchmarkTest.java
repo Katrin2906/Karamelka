@@ -13,11 +13,12 @@ public class BenchmarkTest {
 
         long start = System.currentTimeMillis();
         for (int i = 0; i < count; i++) {
-            myString = myString.concat("r...");
+            myString = myString.concat("r..."); // "r..." - везде повторяется, вынеси в переменную
         }
         long finish = System.currentTimeMillis();
         System.out.println("String=" + (finish - start));
-        System.out.println(new java.text.SimpleDateFormat(" HH:mm:ss").format(new java.util.Date((finish - start) * 1000)));
+        // new java.text.SimpleDateFormat -> new SimpleDateFormat - у тебя появится импорт вверху, влад на прошлом занятии спрашивал что это
+        System.out.println(new java.text.SimpleDateFormat(" HH:mm:ss").format(new java.util.Date((finish - start) * 1000))); // этот кусок кода часто повторяется, вынеси его в отдельный метод
 
 
         start = System.currentTimeMillis();
