@@ -2,15 +2,19 @@ package homework_7.task_6;
 
 import java.util.Arrays;
 
+// у тебя код не отформатирован
 public class StringArray {
     public static void main(String[] args) {
 
         String[] oldWords = {"World", "dog", "stolen", "Ann", "Wendy", "Egorka" };
         int count = 0;
 
+        // слишком много усилий и лишних итераций в твоем коде. Сначала узнай сколько нужных слов в массиве, затем создай массив нужного размера
+        // вторым шагом еще раз пройдись по исходному массиву и добавь в новый нужные слова
+        // в своем коде ты учитываешь только большую букву W, а надо еще и маленькую
         for (int i = 0; i < oldWords.length; i++)
 
-        {
+        { // фигурная скобка доожна быть на строке с описанием цикла
             if (oldWords[i].contains("W")) {
 
                 System.out.println("нашел " + oldWords[i]);
