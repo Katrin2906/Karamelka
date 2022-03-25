@@ -19,7 +19,11 @@ public class Counter {
         this.otherText = otherText;
     }
 
-    public String StringCounter() {
+    // я заметил что плохо подобрал текст, поэтому ты тоже скорее всего не заметила проблему
+    // суть в том, что твой метод будет возвращать 0, если ничего не найдет и 1, если найдет 1 повтор. Но ведь повторений может быть гораздо больше
+    // тебе нужен был метод lastIndexOf(String str, int fromIndex), он возвращает -1, если ничего не найдено, или индекс где находится строка.
+    // Таким образом ты сможешь узнавать индекс и говорить программе с какого момента начинать искать следующий повтор
+    public String StringCounter() { // StringCounter -> stringCounter
         counter = 0;
         if (MAIN_TEXT.contains(otherText)) {
             counter++;
