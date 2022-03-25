@@ -13,6 +13,8 @@ public class AutoMark {
         marks[5] = "1,8";
         String change = "2,0T";
         String secondChange = "1,8T";
+        
+        // обе замены можно сделать за 1 итерацию (цикл) по массиву, просто внутри 2 if будет
         for (int i = 0; i < marks.length; i++) {
             if (marks[i].equals("1,4")) {
                 marks[i] = change;
