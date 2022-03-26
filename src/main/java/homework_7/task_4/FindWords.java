@@ -7,10 +7,10 @@ public class FindWords {
         Counter good = new Counter("good");
         Counter plan = new Counter("plan");
 
-        System.out.println(alert.StringCounter());
-        System.out.println(add.StringCounter());
-        System.out.println(good.StringCounter());
-        System.out.println(plan.StringCounter());
+        System.out.println(alert.stringCounter());
+        System.out.println(add.stringCounter());
+        System.out.println(good.stringCounter());
+        System.out.println(plan.stringCounter());
     }
 }
 

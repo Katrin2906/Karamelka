@@ -9,9 +9,10 @@ public class StringLength {
         blabla[3] = "went";
         blabla[4] = "up";
         blabla[5] = "the";
+        int letterNum=5;
 
         for (int i = 0; i < blabla.length; i++) {
-            if (blabla[i].length() >= 5) { // 5 вынеси в переменную, магических чисел в коде стоит избегать
+            if (blabla[i].length() >= letterNum) {
                 System.out.println("Нашлась! " + blabla[i]);
             }
         }

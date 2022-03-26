@@ -10,10 +10,11 @@ public class BenchmarkTest {
         StringBuffer stringBuffer = new StringBuffer();
 
         int count = 200000;
+        String change="r...";
 
         long start = System.currentTimeMillis();
         for (int i = 0; i < count; i++) {
-            myString = myString.concat("r..."); // "r..." - везде повторяется, вынеси в переменную
+            myString = myString.concat(change);
         }
         long finish = System.currentTimeMillis();
         System.out.println("String=" + (finish - start));
@@ -23,7 +24,7 @@ public class BenchmarkTest {
 
         start = System.currentTimeMillis();
         for (int i = 0; i < count; i++) {
-            stringBuilder.append("r...");
+            stringBuilder.append(change);
         }
         finish = System.currentTimeMillis();
         System.out.println("StringBuilder=" + (finish - start));
@@ -32,7 +33,7 @@ public class BenchmarkTest {
 
         start = System.currentTimeMillis();
         for (int i = 0; i < count; i++) {
-            stringBuffer.append("r...");
+            stringBuffer.append(change);
         }
         finish = System.currentTimeMillis();
         System.out.println("StringBuffer=" + (finish - start));
