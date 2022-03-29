@@ -4,7 +4,7 @@ public class ParsingMain {
     public static void main(String[] args) {
         try {
             Parsing.Parsing("rgf");
-
+// лишняя строка
         } catch (NumberFormatException e) {
             System.out.println("Invalid input format. Please try again.");
         }
