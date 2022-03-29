@@ -9,6 +9,13 @@ public class WashingMachine {
         this.washingMachine = "Заря";
     }
 
+    /*
+    по идее электричество должно само пропадавать внезапно. Внутри метода можно сделать цикл и вызывать random.nextBoolean() как триггер
+    ну и если вылетает исключение то машинка сама запускает метод слива воды в блоке catch или в finally, здесь он тоже хорошо подойдет
+    
+    Random random = new Random();
+    random.nextBoolean();
+        */
     public String workingMachine(Boolean electricity) throws ElectricityExeption {
         if(electricity){
             return "working, electricity on";
@@ -17,6 +24,7 @@ public class WashingMachine {
         }
     }
 
+    // этот метод можно сделать приватным, т.к. он вызывается автоматически
     public String waterOff(){
         return "water off";
     }
