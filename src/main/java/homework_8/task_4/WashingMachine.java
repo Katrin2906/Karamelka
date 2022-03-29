@@ -6,7 +6,7 @@ public class WashingMachine {
     private String washingMachine;
 
     public WashingMachine() {
-        this.washingMachine = "Заря";
+        this.washingMachine = "Заря"; // лучше заменить на конструктор с аргументом, чтобы у машинок было разное название
     }
 
     /*
