@@ -5,7 +5,7 @@ public class ArrayLength {
     private static final Integer MAX_VALUE = 20;
     private Integer arrayLength;
 
-
+// лишняя строка
     public ArrayLength() {
     }
 
