@@ -7,11 +7,10 @@ public class StringReverse_1 {
         return charAt();
     }
 
-    public static String reverseString(String reverse) {
+    public static String reverseString(String str) {
         String result = "";
-
-        for (int i = reverse.length(); i == 0; i--) { // а не проще было бы бежать с конца строки?
-            result = charAt() + result;
+        for (int i = 0; i < str.length(); i++) { // а не проще было бы бежать с конца строки?
+            result = str.charAt(i) + result;
         }
         return result;
     }

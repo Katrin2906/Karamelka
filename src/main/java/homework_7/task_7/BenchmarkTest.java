@@ -1,43 +1,57 @@
 package homework_7.task_7;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 public class BenchmarkTest {
+    private static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
+
     public static void main(String[] args) {
-        String myString = "B";
-        StringBuilder stringBuilder = new StringBuilder();
-        StringBuffer stringBuffer = new StringBuffer();
 
-        int count = 200000;
-        String change="r...";
+        final int numIterations =350_000;
 
-        long start = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {
-            myString = myString.concat(change);
+        StringBuffer strBuffer = new StringBuffer();
+        StringBuilder strBuilder = new StringBuilder();
+        String str = "";
+
+        Timer timer = new Timer();
+        for (int i = 0; i < numIterations; ++i) {
+            str += i % 10;
         }
-        long finish = System.currentTimeMillis();
-        System.out.println("String=" + (finish - start));
-        // new java.text.SimpleDateFormat -> new SimpleDateFormat - у тебя появится импорт вверху, влад на прошлом занятии спрашивал что это
-        System.out.println(new java.text.SimpleDateFormat(" HH:mm:ss").format(new java.util.Date((finish - start) * 1000))); // этот кусок кода часто повторяется, вынеси его в отдельный метод
+        printDuration(timer.getDuration(), "String");
 
-
-        start = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {
-            stringBuilder.append(change);
+        timer.restart();
+        for (int i = 0; i < numIterations; ++i) {
+            strBuffer.append(i % 10);
         }
-        finish = System.currentTimeMillis();
-        System.out.println("StringBuilder=" + (finish - start));
-        System.out.println(new java.text.SimpleDateFormat(" HH:mm:ss").format(new java.util.Date((finish - start) * 1000)));
+        printDuration(timer.getDuration(), "StringBuffer");
 
-
-        start = System.currentTimeMillis();
-        for (int i = 0; i < count; i++) {
-            stringBuffer.append(change);
+        timer.restart();
+        for (int i = 0; i < numIterations; ++i) {
+            strBuilder.append(i % 10);
         }
-        finish = System.currentTimeMillis();
-        System.out.println("StringBuffer=" + (finish - start));
-        System.out.println(new java.text.SimpleDateFormat(" HH:mm:ss").format(new java.util.Date((finish - start) * 1000)));
+        printDuration(timer.getDuration(), "StringBuilder");
+    }
 
+    private static void printDuration(LocalDateTime time, String prefix) {
+        System.out.println(prefix + " : " + dtf.format(time));
     }
 }
+
+class Timer {
+    long startTime = System.currentTimeMillis();
+
+    public void restart() {
+        startTime = System.currentTimeMillis();
+    }
+
+    public LocalDateTime getDuration() {
+        long duration = System.currentTimeMillis() - startTime;
+
+        return LocalDateTime.ofInstant(Instant.ofEpochMilli(duration), ZoneId.of("UTC"));
+    }
+}
+
+
