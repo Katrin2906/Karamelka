@@ -10,7 +10,7 @@ public class EmployeeReturn {
              ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
             Employee valera = (Employee) objectInputStream.readObject();
             System.out.println(valera);
-        } catch (IOException | ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) { // я бы заменил на catch (Exception e) или сделал два блока catch
             e.printStackTrace();
         }
     }
