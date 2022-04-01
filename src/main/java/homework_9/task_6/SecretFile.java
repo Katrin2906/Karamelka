@@ -5,6 +5,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
 
+// код не отформатирован
 public class SecretFile{
 public static BufferedImage ImageDownloader(String urlString){
         BufferedImage image = null;
