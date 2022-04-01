@@ -4,9 +4,11 @@ import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
+// Employee extends Work - звучит как рабство. Наследование работает по принципу "является". 
+// Employee является Work? Я думаю нет, поэтому Work - это должно быть полем класса Employee
 public class Employee extends Work implements Serializable {
-    private static final long serialVersionUID = -72801047642231177L;
-    public String name;
+    private static final long serialVersionUID = -72801047642231177L; // я бы добавил абзай между static и обычными полями класса
+    public String name; // public -> private. Не должно быть паблик полей у класса
     private Integer age;
 
     public Employee(String position, Integer minWorkExperience, String name, Integer age) {
