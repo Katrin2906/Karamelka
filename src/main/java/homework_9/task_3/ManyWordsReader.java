@@ -5,9 +5,8 @@ import java.io.IOException;
 
 public class ManyWordsReader {
     public static void main(String[] args) {
-        try {
-            // здесь ты используешь try-catch, но поток все еще не закрыт. На лекции я показывал try с ресурсами, используй его
-            FileReader manyWords = new FileReader("src/main/java/homework_9/task_2/manyWords");
+        try (FileReader manyWords = new FileReader("src/main/java/homework_9/task_2/manyWords");
+        ) {
             String newManyWords = manyWords.getEncoding();
             System.out.println(newManyWords);
             int n;

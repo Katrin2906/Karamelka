@@ -1,7 +1,6 @@
 package homework_9.task_4;
 
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.ObjectInputStream;
 
 public class EmployeeReturn {
@@ -10,7 +9,7 @@ public class EmployeeReturn {
              ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
             Employee valera = (Employee) objectInputStream.readObject();
             System.out.println(valera);
-        } catch (IOException | ClassNotFoundException e) { // я бы заменил на catch (Exception e) или сделал два блока catch
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

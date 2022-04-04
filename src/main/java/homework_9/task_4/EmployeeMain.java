@@ -9,7 +9,7 @@ public class EmployeeMain {
     public static void main(String[] args) {
         try (FileOutputStream fileOutputStream = new FileOutputStream("src/main/java/homework_9/task_4/Employee");
              ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
-            Employee valera = new Employee("Manager", 3, "Valera", 25);
+            Employee valera = new Employee("Valera", 23, new Work("Singer", 4));
             objectOutputStream.writeObject(valera);
             objectOutputStream.flush();
         } catch (IOException e) {

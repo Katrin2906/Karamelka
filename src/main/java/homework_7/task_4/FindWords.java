@@ -11,7 +11,7 @@ public class FindWords {
      //   Counter plan = new Counter("plan"
 
         System.out.println(validator("alert"));
-        System.out.println(validator("add"));
+     //   System.out.println(validator("add"));
 
     }
 }

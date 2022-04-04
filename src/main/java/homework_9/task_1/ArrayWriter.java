@@ -5,16 +5,18 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class ArrayWriter {
-    public static void main(String[] args) throws IOException {
-
-        // потоки надо обязательно закрывать, здесь без try/catch никак
-        FileOutputStream fos = new FileOutputStream("src/main/java/homework_9/task_1/fileArray");
-        DataOutputStream tinyArray = new DataOutputStream(fos);
-        int[] tiny = new int[12];
-        for (int i = 0; i < tiny.length; i++) {
-            tiny[i] = i + 2;
-            tinyArray.writeInt(tiny[i]);
-            tinyArray.flush(); // flush лучше вызвать 1 раз в конца записи, в каждой итерации не надо
+    public static void main(String[] args) {
+        try (FileOutputStream fos = new FileOutputStream("src/main/java/homework_9/task_1/fileArray")) {
+            DataOutputStream tinyArray = new DataOutputStream(fos);
+            int[] tiny = new int[12];
+            for (int i = 0; i < tiny.length; i++) {
+                tiny[i] = i + 2;
+                tinyArray.writeInt(tiny[i]);
+                fos.flush();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
+
