@@ -10,6 +10,7 @@ public enum Strategy {
             return name.toLowerCase();
         }
     },
+    // для этой стратегии я бы еще разделял основное имя от расширения, чтобы файл task.txt не выглядел как TASK.TXT
     UPPERCASE {
         public String rename(String name) {
             return name.toUpperCase();
