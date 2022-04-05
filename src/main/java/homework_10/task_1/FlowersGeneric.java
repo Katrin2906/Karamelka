@@ -12,6 +12,15 @@ public class FlowersGeneric<T> {
         return petals;
     }
 
+    // у тебя метод называется getName(), а возвращает по факту объект типа Class. Есть подозрение что твоя программа выкидывает java.lang.ClassCastException
+    // чтобы это исправить надо заменить (T) getClass() на (T) getClass().getName(), но это не решит проблему, если вместо строки ты захочешь использовать Integer
+    /*
+    Этот метод лучше сделать вот так
+    
+    public String getName() {
+        return getClass().getName();
+    }
+    */
     public T getName() {
         return (T) getClass();
     }
