@@ -1,5 +1,6 @@
 package homework_10.task_3;
 
+// Тип Т - это марка будущего автомобиля, который будет хранится в гараже. Ниже положил тебе пример как мог выглядеть твой код
 public class Garages<T> {
 
     private T auto;
@@ -37,3 +38,18 @@ public class Garages<T> {
 
 }
 
+// Example
+record Garage<T>(T[] cars) {
+
+     public void replaceFirst(T car) {
+         cars[0] = car;
+     }
+}
+
+record Bmw(String name) {
+
+}
+
+record Lada(String name) {
+
+}
