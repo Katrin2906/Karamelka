@@ -3,7 +3,7 @@ package homework_10.task_2;
 public class StrategyMain {
     public static void main(String[] args) {
 
-        String[] name = {"Tjknj98hj", "HgtTTTjjn", "O_JINjy"};
+        String[] name = {"Tjknj98hj", "HgtTTTjjn", " "};
 
         for (int i = 0; i < name.length; i++) {
             // file - это не файл, а стратегия по его переименованию, файл у тебя это name[i]
