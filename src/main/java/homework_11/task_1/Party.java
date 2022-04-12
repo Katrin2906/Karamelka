@@ -9,12 +9,12 @@ public class Party {
         List<String> names = new ArrayList<>();
         names.add("Ann");
         names.add("Semen");
-        names.add("Anasteisha");
+        names.add("Anasteisha"); // а вот это имя я знаю из какого фильма :)
         names.add("Valera");
         System.out.println(names);
         if (names.contains(NewName.NewName())) {
             System.out.println("Come in");
-        } else System.out.println("Sorry,try to visit us next time");
+        } else System.out.println("Sorry,try to visit us next time"); // всегда добавляй фигурные скобки после else
     }
 }
 
