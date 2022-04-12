@@ -16,7 +16,7 @@ public class FindName {
 
         Pattern pattern = Pattern.compile("[H-W]");
         Matcher matcher = pattern.matcher((CharSequence) set);
-        while (matcher.find())
+        while (matcher.find()) // всегда используй {} 
             System.out.println(matcher.group());
     }
 }
