@@ -2,6 +2,7 @@ package homework_11.task_10;
 
 import java.util.Objects;
 
+// +
 public class Fruits {
     private String name;
     private Integer weight;
