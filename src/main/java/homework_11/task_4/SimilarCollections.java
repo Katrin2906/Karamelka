@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+// +
 public class SimilarCollections {
     public static void main(String[] args) {
         List<String> child = new ArrayList<>();
@@ -12,13 +13,18 @@ public class SimilarCollections {
         child.add("Mary");
         child.add("Kate");
         child.add("Mustafa");
+        
         System.out.println("First collection " + child);
+        
         List<String> boys = new ArrayList<>();
         boys.add("Alex");
         boys.add("Valera");
         boys.add("Mustafa");
+        
         System.out.println("Second collection " + boys);
+        
         child.retainAll(boys);
+       
         System.out.println("Last result " + child);
     }
 }
