@@ -11,6 +11,10 @@ public class TreeSetSort {
             elements.add(i);
         }
         Set<Integer> reverse = ((TreeSet<Integer>) elements).descendingSet();
+        
+        // вот так еще можно. Старайся избегать класс кастов
+        // Set<Integer> integers = new TreeSet<>(Collections.reverseOrder());
+        
         System.out.println("Initial TreeSet " + elements);
         System.out.println("Final TreeSet " + reverse);
     }
