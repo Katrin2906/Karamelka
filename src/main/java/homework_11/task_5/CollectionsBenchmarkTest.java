@@ -23,6 +23,8 @@ public class CollectionsBenchmarkTest {
         }
 
         Timer timer = new Timer();
+        
+        // у тебя два ябсолютно одинаковых цикла, сделай метод, который будет принимать List и удалять элементы. А в методе main ты его просто вызовешь для ArrayList и LinkedList
         timer.restart();
         do {
             arrayList.remove((arrayList.size() / 2));
@@ -41,14 +43,15 @@ public class CollectionsBenchmarkTest {
     }
 }
 
+// класс Timer в отдельный файл
 class Timer {
-    long startTime = System.currentTimeMillis();
+    long startTime = System.currentTimeMillis(); // сразу присваивать время не стоит
 
-    public void restart() {
+    public void restart() { // из такого метода было бы хорошо возвращать значение времени старта, т.е. return System.currentTimeMillis();
         startTime = System.currentTimeMillis();
     }
 
-    public LocalDateTime getDuration() {
+    public LocalDateTime getDuration() { // этот метод лучше сделать с 2 аргументами start/finish и возвращать результат
         long duration = System.currentTimeMillis() - startTime;
         return LocalDateTime.ofInstant(Instant.ofEpochMilli(duration), ZoneId.of("UTC"));
     }
