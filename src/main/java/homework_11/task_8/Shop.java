@@ -23,7 +23,7 @@ public class Shop implements Comparable {
     // public int compareTo(Shop o) {
     @Override
     public int compareTo(Object o) {
-        // если всегда возвращать 0, то получается у тебя все элементы одинаковые и в HashSet попадает максимум 1 Shop, даже если у магазинов будут разные name и id
+        // если всегда возвращать 0, то получается у тебя все элементы одинаковые и в TreeSet попадает максимум 1 Shop, даже если у магазинов будут разные name и id
         // Посмотри как я делал на лекции
         return 0;
     }
