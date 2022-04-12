@@ -2,11 +2,12 @@ package homework_11.task_8;
 
 import java.util.Objects;
 
+// public class Shop implements Comparable<Shop> {
 public class Shop implements Comparable {
     private String name;
-    private Integer ID;
+    private Integer ID; // ID -> id - названия полей с маленькой буквы
 
-    public Shop(String name, Integer ID) {
+    public Shop(String name, Integer ID) { // ID -> id - название переменных с маленькой буквы
         this.name = name;
         this.ID = ID;
     }
@@ -19,9 +20,10 @@ public class Shop implements Comparable {
                 '}';
     }
 
+    // public int compareTo(Shop o) {
     @Override
     public int compareTo(Object o) {
-        return 0;
+        return 0; // если всегда возвращать 0, то получается у тебя все элементы одинаковые и в HashSet попадает максимум 1 Shop. Посмотри как я делал на лекции
     }
 
     @Override
