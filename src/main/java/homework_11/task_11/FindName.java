@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 
 public class FindName {
     public static void main(String[] args) {
+        // очень много действий получилось - из массива и лист и из листа в трисет. Лучше так не делать
         String[] array = {"Harry", "Mindy", "Alex", "Valera", "Kam", "Wisper"};
         List<String> list = Arrays.asList(array);
         Set<String> set = new TreeSet<>(list);
