@@ -45,7 +45,7 @@ public class CollectionsBenchmarkTest {
 
 // класс Timer в отдельный файл
 class Timer {
-    long startTime = System.currentTimeMillis(); // сразу присваивать время не стоит
+    long startTime = System.currentTimeMillis(); // поле должно быть приватным и сразу присваивать время не стоит, очень уж изменчивое значение
 
     public void restart() { // из такого метода было бы хорошо возвращать значение времени старта, т.е. return System.currentTimeMillis();
         startTime = System.currentTimeMillis();
