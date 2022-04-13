@@ -20,12 +20,8 @@ public class StudentMain {
         System.out.println(students);
 
         Comparator<Student> studentComparatorAge = studentAgeComparator.thenComparing(studentAgeComparator);
-        Set<Student> studentsAge = new TreeSet<>(studentComparatorAge
-        // studentsAge.addAll(students); - так проще                                        
-        studentsAge.add(new Student("Albert", 22));
-        studentsAge.add(new Student("BillyBob", 40));
-        studentsAge.add(new Student("Ann", 29));
-        studentsAge.add(new Student("Garry", 18));
+        Set<Student> studentsAge = new TreeSet<>(studentComparatorAge);
+        studentsAge.addAll(students);
 
         System.out.println(studentsAge);
     }

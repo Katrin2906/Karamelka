@@ -6,17 +6,15 @@ public class StrategyMain {
         String[] name = {"Tjknj98hj", "HgtTTTjjn", " "};
 
         for (int i = 0; i < name.length; i++) {
-            // file - это не файл, а стратегия по его переименованию, файл у тебя это name[i]
-            Strategy file = Strategy.LOWERCASE;
-            System.out.println(file.rename(name[i]));
-            
-            // file1 - это не файл, а стратегия по его переименованию, файл у тебя это name[i]
-            Strategy file1 = Strategy.UPPERCASE;
-            System.out.println(file1.rename(name[i]));
-            
-            // file2 - это не файл, а стратегия по его переименованию, файл у тебя это name[i]
-            Strategy file2 = Strategy.UPPERFIRST;
-            System.out.println(file2.rename(name[i]));
+
+            FileNameStrategy strategy = FileNameStrategy.LOWERCASE;
+            System.out.println(strategy.rename(name[i]));
+
+            FileNameStrategy strategy1 = FileNameStrategy.UPPERCASE;
+            System.out.println(strategy1.rename(name[i]));
+
+            FileNameStrategy strategy2 = FileNameStrategy.UPPERFIRST;
+            System.out.println(strategy2.rename(name[i]));
         }
     }
 }

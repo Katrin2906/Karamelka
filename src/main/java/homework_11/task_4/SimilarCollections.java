@@ -7,7 +7,7 @@ import java.util.List;
 // +
 public class SimilarCollections {
     public static void main(String[] args) {
-        List<String> child = new ArrayList<>(); // child -> children, во множ числе
+        List<String> child = new ArrayList<>();
         child.add("Alex");
         child.add("Valera");
         child.add("Mary");

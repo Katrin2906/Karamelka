@@ -21,8 +21,8 @@ public class FlowersGeneric<T> {
         return getClass().getName();
     }
     */
-    public T getName() {
-        return (T) getClass();
+    public String getName() {
+        return  getClass().getName();
     }
 
     @Override

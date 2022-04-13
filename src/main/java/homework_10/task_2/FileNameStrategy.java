@@ -3,7 +3,7 @@ package homework_10.task_2;
 import java.lang.constant.Constable;
 
 // Strategy -> FileNameStrategy. Просто Strategy слишком абстрактное название
-public enum Strategy {
+public enum FileNameStrategy {
 
     LOWERCASE {
         public String rename(String name) {

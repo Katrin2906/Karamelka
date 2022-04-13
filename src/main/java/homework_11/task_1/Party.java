@@ -12,9 +12,11 @@ public class Party {
         names.add("Anasteisha"); // а вот это имя я знаю из какого фильма :)
         names.add("Valera");
         System.out.println(names);
-        if (names.contains(NewName.NewName())) {
+        if (names.contains(NewName.newName())) {
             System.out.println("Come in");
-        } else System.out.println("Sorry,try to visit us next time"); // всегда добавляй фигурные скобки после else
+        } else {
+            System.out.println("Sorry,try to visit us next time");
+        }
     }
 }
 
