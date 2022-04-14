@@ -14,5 +14,5 @@ public class SportsmensMain {
         Comparator<Sportsmen> sportsmenComparator = SpeedComparator.thenComparing(Sportsmen::getSpeed);
         List<Sportsmen> sportsmen = new ArrayList<>(sportsmenComparator);
 
-    }//не сообразила до конца, как действовать дальше
+    }
 }
