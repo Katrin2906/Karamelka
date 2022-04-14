@@ -15,9 +15,9 @@ public class User {
         return name;
     }
 
-    public static List<User> process(List<String> users, Predicate<String> predicat) {
+    public static List<String> findLetters(List<String> users, Predicate<String> predicat) {
 
-        List<User> result = new ArrayList<User>();
+        List<String> result = new ArrayList();
 
         for (String user : users)
 
