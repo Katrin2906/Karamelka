@@ -15,9 +15,11 @@ public class User {
         return name;
     }
 
-    public static List<String> findLetters(List<String> users, Predicate<String> predicat) {
-
-        List<String> result = new ArrayList();
+    // User - это класс сущности, в нем просто хранятся данные. Методы вроде process должны быть в отдельном классе
+    public static List<User> process(List<String> users, Predicate<String> predicat) {
+// users.removeIf(predicat) решает твою задачу
+        // можно с использованием итератора, но создавать еще одну коллекцию смысла нету и код получает не оптимальным
+        List<User> result = new ArrayList<User>();
 
         for (String user : users)
 
@@ -26,7 +28,7 @@ public class User {
                 result.add(user);
 
         return result;
-
+// лишняя строка
     }
 
     @Override
