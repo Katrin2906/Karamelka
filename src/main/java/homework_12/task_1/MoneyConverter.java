@@ -2,6 +2,7 @@ package homework_12.task_1;
 
 import java.util.function.Function;
 
+// +
 public class MoneyConverter {
     public static void main(String[] args) {
 
