@@ -4,6 +4,7 @@ import homework_11.task_9.Student;
 
 import java.util.Comparator;
 
+// +
 public class SpeedComparator implements Comparator<Sportsmen> {
     @Override
     public int compare(Sportsmen o1, Sportsmen o2) {
