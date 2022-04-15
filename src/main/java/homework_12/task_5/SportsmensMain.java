@@ -13,6 +13,9 @@ public class SportsmensMain {
 
         Comparator<Sportsmen> sportsmenComparator = SpeedComparator.thenComparing(Sportsmen::getSpeed);
         List<Sportsmen> sportsmen = new ArrayList<>(sportsmenComparator);
+        
+        // можно было оформить в виде цикла на 600м и смотреть сколько пробежал каждый спортсмен. А затем раздать медали кто пробежал больше (а по факту быстрее) всего
+        // вариант решения может быть разный, главное пробежать дистанцию и вручить медальки, для спортсменов это важно, а ты никому не вручила, жизнь тлен...
 
     }
 }
