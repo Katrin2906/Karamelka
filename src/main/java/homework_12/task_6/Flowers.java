@@ -1,7 +1,7 @@
 package homework_12.task_6;
 
 // класс идеально подходит чтобы быть record
-public class Flowers {
+public class Flowers { // Flowers -> Flower в единственном числе
 
     private final String name;
 
