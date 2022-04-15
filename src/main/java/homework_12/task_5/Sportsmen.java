@@ -7,8 +7,8 @@ public class Sportsmen {
 
     private String name;
     private Integer speed;
-    private Integer competition_id;
-    private String medal;
+    private Integer competition_id; // competition_id -> competitionId
+    private String medal; // в задании сказано, что это должны быть коллекция (List/Map здесь по желанию)
 
     public Sportsmen(String name, Integer speed, Map<Integer, String> medals) {
         this.name = name;
