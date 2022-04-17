@@ -11,9 +11,9 @@ public class FlowersMain {
         flowers.add("Daisy");
         flowers.add("Poppy");
         System.out.println(flowers);
-        flowers.forEach(fl -> System.out.println(Flowers.getName()));
+    //    flowers.forEach(fl -> System.out.println(Flowers.getName()));
 
-        var sortedFlowers = flowers.stream().sorted(Comparator.comparing(Flowers::getName, Comparator.reverseOrder())).toList();
+     //   var sortedFlowers = flowers.stream().sorted(Comparator.comparing(Flowers::getName, Comparator.reverseOrder())).toList();
 
     }
 }

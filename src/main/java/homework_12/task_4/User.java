@@ -25,16 +25,13 @@ public class User {
 
             if (predicat.test(user))
 
-                result.add(user);
+              //  result.add(user);
 
         return result;
 // лишняя строка
-    }
+  //  }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                '}';
+
+        return result;
     }
 }

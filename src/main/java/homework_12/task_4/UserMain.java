@@ -16,6 +16,6 @@ public class UserMain {
         System.out.println(users);
 
         // List newUsers -> List<User> newUsers, не стоит терять generic
-        List newUsers = process(users, (User u) -> u.getName().equals("A")); // в задаче были имена на A,P,E -> List.of(A,P,E) и при помощи contains решаешься вопрос
+        //   List newUsers = process(users, (User u) -> u.getName().equals("A")); // в задаче были имена на A,P,E -> List.of(A,P,E) и при помощи contains решаешься вопрос
     }
 }
