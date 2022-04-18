@@ -15,10 +15,12 @@ public class AppleAndOther {
         mobile.add(new Mobile("Apple", "13 mini"));
         mobile.add(new Mobile("Xiaomi", "Note 11"));
         mobile.add(new Mobile("BlackBerry", "Bold 9000"));
+        
         System.out.println(mobile);
+        
         Map<Boolean, List<Mobile>> newApple =
-                mobile.stream()
-                        .collect(Collectors.partitioningBy(producer -> producer.producer() == "Apple"));
+                mobile.stream() // лучше вернуть на строку со знаком =
+                        .collect(Collectors.partitioningBy(producer -> producer.producer() == "Apple")); // producer.producer() == "Apple" -> producer.producer().equals("Apple")
         System.out.println(newApple);
     }
 }
