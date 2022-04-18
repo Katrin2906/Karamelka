@@ -18,8 +18,17 @@ public class MobileSort {
                 .collect(Collectors.toSet());
         System.out.println(producers);
 
-        Set<String> newProducers=Set.of("Apple","Samsung","Xiaomi");
+        Set<String> newProducers=Set.of("Apple","Samsung","Xiaomi"); // ты этот список никак не используешь в своем коде
 
+       /* stream() каждый раз проходит по всей коллекции, как цикл. Когда ты дважды делаешь стрим, ты дважды проходишь по коллекции, 
+       а все операции можно сделать за 1 раз
+       
+       Пример:
+       List<String> filteredProducers = mobile.stream()
+                .map(Mobile::producer)
+                .filter(producer -> newProducers.contains(producer))
+                .collect(Collectors.toList());
+       */
        List<String> anyProd= producers.stream()
                .filter("Apple"::equals)
                .toList();
