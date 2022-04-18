@@ -11,9 +11,9 @@ public class FlowersMain {
         flowers.add("Daisy");
         flowers.add("Poppy");
         System.out.println(flowers);
-        flowers.forEach(fl -> System.out.println(Flowers.getName())); // есть подозрение что эта строка не компилируется, лучше сначала решить вопрос, а потом писать дальше
+       // flowers.forEach(fl -> System.out.println(Flowers.getName())); // есть подозрение что эта строка не компилируется, лучше сначала решить вопрос, а потом писать дальше
 
-        var sortedFlowers = flowers.stream().sorted(Comparator.comparing(Flowers::getName, Comparator.reverseOrder())).toList();
+     //   var sortedFlowers = flowers.stream().sorted(Comparator.comparing(Flowers::getName, Comparator.reverseOrder())).toList();
 
         /*
         Вариант решения 1:
