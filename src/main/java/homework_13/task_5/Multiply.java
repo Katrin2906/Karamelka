@@ -12,10 +12,13 @@ public class Multiply {
         nums.add(4);
         nums.add(5);
         nums.add(345);
+        
         System.out.println(nums);
+        
         Integer mult = nums.stream()
                 .limit(5)
                 .reduce(1, (a, b) -> a * b);
+        
         System.out.println(mult);
     }
 }
