@@ -17,10 +17,12 @@ public class MakingMap {
         mobile.add(new Mobile("Apple", "13 mini"));
         mobile.add(new Mobile("Xiaomi", "Note 11"));
         mobile.add(new Mobile("BlackBerry", "Bold 9000"));
+        
         System.out.println(mobile);
 
-        Map<String, Integer> newMap = mobile.stream()
+        Map<String, Integer> newMap = mobile.stream() // newMap -> byProducersCounting, не забивай на название переменных
                 .collect(Collectors.toMap(Mobile::producer, Mobile.Collectors.groupingBy(mob -> mob, Collectors.counting())));
+        
         newMap.forEach((key, value) -> System.out.println(key + " : " + value));
     }
 }
