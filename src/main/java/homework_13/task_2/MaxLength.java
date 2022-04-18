@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 public class MaxLength {
     public static void main(String[] args) {
-        List<String> badBuisness = new ArrayList<>(5);
+        List<String> badBuisness = new ArrayList<>(5); // badBuisness -> badBusiness
         badBuisness.add("Cassio");
         badBuisness.add("Omega");
         badBuisness.add("Breguet");
@@ -16,6 +16,7 @@ public class MaxLength {
         badBuisness.add("Piaget");
         System.out.println("Initial collection " + badBuisness);
 
+        // newWord - название переменной должно отображать ее содержимое
         Optional<String> newWord = badBuisness.stream()
                 .max(Comparator.naturalOrder());
 
