@@ -21,8 +21,9 @@ public class MobileSort {
         Set<String> newProducers=Set.of("Apple","Samsung","Xiaomi");
 
        List<String> anyProd= producers.stream()
-               .filter(prod -> prod.contentEquals((CharSequence) newProducers)).toList();
+               .filter("Apple"::equals)
+               .toList();
         System.out.println(anyProd);
-        
+
     }
 }
