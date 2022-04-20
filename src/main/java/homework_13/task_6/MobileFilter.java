@@ -14,12 +14,13 @@ public class MobileFilter {
         mobile.add(new Mobile("Apple", "13 mini"));
         mobile.add(new Mobile("Xiaomi", "Note 11"));
         mobile.add(new Mobile("BlackBerry", "Bold 9000"));
-        
+
         System.out.println(mobile);
-        
-        List<Mobile> newMobile = mobile.stream() // newMobile - почему такое название? это коллекция уникальный телефонов, вот и назови ее uniquePhones
-                .distinct().toList(); // .toList() - с новой строки
-        
-        System.out.println(newMobile);
+
+        List<Mobile> uniquePhones = mobile.stream()
+                .distinct()
+                .toList();
+
+        System.out.println(uniquePhones);
     }
 }

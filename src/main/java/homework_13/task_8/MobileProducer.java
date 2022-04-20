@@ -1,6 +1,7 @@
 package homework_13.task_8;
 
 import homework_13.task_7.MobilePrce;
+import homework_13.task_7.MobilePrice;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,18 +13,18 @@ import static java.util.stream.Collectors.groupingBy;
 //+
 public class MobileProducer {
     public static void main(String[] args) {
-        List<MobilePrce> mobilePrces = new ArrayList<>();
-        mobilePrces.add(new MobilePrce("Apple", "13 mini", 150));
-        mobilePrces.add(new MobilePrce("Samsung", "S22 Ultra", 200));
-        mobilePrces.add(new MobilePrce("Apple", "13 mini", 100));
-        mobilePrces.add(new MobilePrce("Xiaomi", "Note 11", 180));
-        mobilePrces.add(new MobilePrce("BlackBerry", "Bold 9000", 230));
-        
-        System.out.println(mobilePrces);
-        
-        Map<String, List<MobilePrce>> findProducer = mobilePrces.stream()
-                .collect(Collectors.groupingBy(MobilePrce::producer));
-        
+        List<MobilePrice> mobilePrices = new ArrayList<>();
+        mobilePrices.add(new MobilePrice("Apple", "13 mini", 150));
+        mobilePrices.add(new MobilePrice("Samsung", "S22 Ultra", 200));
+        mobilePrices.add(new MobilePrice("Apple", "13 mini", 100));
+        mobilePrices.add(new MobilePrice("Xiaomi", "Note 11", 180));
+        mobilePrices.add(new MobilePrice("BlackBerry", "Bold 9000", 230));
+
+        System.out.println(mobilePrices);
+
+        Map<String, List<MobilePrice>> findProducer = mobilePrices.stream()
+                .collect(Collectors.groupingBy(MobilePrice::producer));
+
         System.out.println(findProducer);
     }
 }

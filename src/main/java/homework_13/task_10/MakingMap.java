@@ -20,9 +20,9 @@ public class MakingMap {
         
         System.out.println(mobile);
 
-        Map<String, Integer> newMap = mobile.stream() // newMap -> byProducersCounting, не забивай на название переменных
+        Map<String, Integer> byProducersCounting = mobile.stream()
                 .collect(Collectors.toMap(Mobile::producer, Mobile.Collectors.groupingBy(mob -> mob, Collectors.counting())));
-        
-        newMap.forEach((key, value) -> System.out.println(key + " : " + value));
+
+        byProducersCounting.forEach((key, value) -> System.out.println(key + " : " + value));
     }
 }
